@@ -1,0 +1,8 @@
+# Original screen recordings (up to 154 MB each, over GitHub's 100 MB file limit).
+# The site uses the web-sized copies in assets/*.mp4 instead.
+assets/Videos/
+
+# Local preview config
+.claude/
+
+.DS_Store

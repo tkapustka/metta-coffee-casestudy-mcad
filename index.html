@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metta Coffee — Web Design Case Study · Tyler Kapustka</title>
+  <meta name="description" content="MCAD Web Design case study: redesigning Metta Coffee's website into a dual-path experience for coffee drinkers and local makers.">
+  <link rel="icon" href="assets/metta-logo.png">
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/vyh5vho.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap">
+  <link rel="stylesheet" href="styles.css?v=17">
+</head>
+<body>
+
+<!-- Carousel arrow from Figma (assets/arrow-right.svg), inlined so its colors can swap on hover -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="arrow-icon" viewBox="0 0 163.804 163.804">
+    <circle cx="81.9019" cy="81.9019" r="80.4" style="fill: var(--arrow-bg, #822935); stroke: #822935; stroke-width: 3; transition: fill .3s"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" style="fill: var(--arrow-fg, #F3EEE8); transition: fill .3s" d="M125.835 85.6076L80.7282 40.5009L76.3023 44.931L116.975 85.6076L76.2981 126.284L80.7282 130.714L125.835 85.6076Z"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" style="fill: var(--arrow-fg, #F3EEE8); transition: fill .3s" d="M121.379 82.4609H35.596V88.7239H121.381L121.379 82.4609Z"/>
+  </symbol>
+</svg>
+
+<!-- Progress + chapter nav -->
+<div class="progress" aria-hidden="true"><span></span></div>
+<nav class="dots" aria-label="Case study sections"></nav>
+<div class="chapter-pill" aria-hidden="true"><span class="chapter-pill__label">Intro</span></div>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="intro" data-title="Intro" data-chapter="Intro">
+  <div class="hero__media">
+    <img src="assets/hero-laptop.jpg" alt="The redesigned Metta Coffee homepage open on a laptop beside a latte">
+  </div>
+  <div class="hero__shade"></div>
+  <div class="hero__badge">
+    <img class="hero__badge-shape" src="assets/logo-badge.svg" alt="">
+    <img class="hero__logo" src="assets/metta-logo.png" alt="Metta Coffee logo">
+  </div>
+  <div class="hero__byline">
+    <span><a href="https://www.TylerKapustka.com" target="_blank" rel="noopener">www.TylerKapustka.com</a></span>
+    <span>MCAD</span>
+    <span>Web Design</span>
+  </div>
+  <h1 class="hero__word" aria-label="Metta Coffee">
+    <span>M</span><span>e</span><span>t</span><span>t</span><span>a</span><span class="sp"> </span><span>C</span><span>o</span><span>f</span><span>f</span><span>e</span><span>e</span>
+  </h1>
+  <a class="hero__scroll" href="#overview" aria-label="Start the case study">
+    <span>Scroll to begin</span><i></i>
+  </a>
+</header>
+
+<main>
+
+<!-- ================= CRIMSON BAND: Research ================= -->
+<div class="band band--crimson">
+
+  <section class="section" id="overview" data-title="Project Overview" data-chapter="Research">
+    <div class="wrap">
+      <h2 class="title"><span>Project Overview</span></h2>
+      <div class="overview">
+        <div class="overview__text">
+          <p class="reveal" style="--i:0"><b>Project:</b> Redesigned the website for Metta Coffee, a micro-batch roaster and community hub in Anoka, Minnesota.</p>
+          <p class="reveal" style="--i:1"><b>Dual Navigation:</b> Serves daily coffee drinkers and local artisans or pop-up vendors seeking venue space.</p>
+          <p class="reveal" style="--i:2"><b>Design &amp; Features:</b> Built on a structured Swiss grid with editorial typography and warm tones, featuring a maker journal, event booking portals, and e-commerce.</p>
+        </div>
+        <ul class="pills">
+          <li class="pill reveal from-right" style="--i:0"><span>Project Type</span><span>Responsive Website</span></li>
+          <li class="pill reveal from-right" style="--i:1"><span>Industry</span><span>Coffee Shop</span></li>
+          <li class="pill reveal from-right" style="--i:2"><span>Location</span><span>Anoka, MN</span></li>
+          <li class="pill reveal from-right" style="--i:3"><span>Year</span><span>2026</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section client" id="client" data-title="Client Request" data-chapter="Research">
+    <div class="client__photo reveal-clip">
+      <img src="assets/client-coffee.jpg" alt="Friends toasting with lattes and an iced coffee" loading="lazy">
+    </div>
+    <div class="client__body">
+      <h2 class="title"><span>Client Request</span></h2>
+      <p class="lede reveal">Metta Coffee requested a comprehensive website redesign to transform their disconnected, boilerplate storefront into a dual-path digital ecosystem serving both daily coffee drinkers and local artisans seeking venue partnerships.</p>
+      <blockquote class="quote">
+        <img class="quote__marks" src="assets/quote-marks.svg" alt="">
+        <p class="quote__text"><span>We want to sit between</span><span>coffee &amp; local artists.</span></p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section" id="current" data-title="Current Site" data-chapter="Research">
+    <div class="wrap">
+      <h2 class="title"><span>Current Site</span></h2>
+      <div class="devices devices--current">
+        <div class="devices__desktop reveal rise">
+          <img src="assets/current-desktop.png" alt="" loading="lazy">
+          <div class="screen-video screen-video--desktop" data-video>
+            <video preload="none" muted playsinline poster="assets/current-desktop-poster.jpg">
+              <source src="assets/current-site-desktop.mp4" type="video/mp4">
+              <source src="assets/current-site-desktop.mov">
+            </video>
+            <button class="screen-video__play" aria-label="Play the desktop screen recording of the original Metta Coffee site">
+              <img src="assets/play.svg" alt="">
+            </button>
+            <p class="screen-video__msg" hidden>Video not found — add <code>assets/current-site-desktop.mp4</code> (or .mov)</p>
+          </div>
+        </div>
+        <div class="devices__mobile reveal rise" style="--i:2">
+          <img src="assets/current-mobile.png" alt="" loading="lazy">
+          <div class="screen-video screen-video--mobile" data-video>
+            <video preload="none" muted playsinline poster="assets/current-mobile-poster.jpg">
+              <source src="assets/current-site-mobile.mp4" type="video/mp4">
+              <source src="assets/current-site-mobile.mov">
+            </video>
+            <button class="screen-video__play" aria-label="Play the mobile screen recording of the original Metta Coffee site">
+              <img src="assets/play.svg" alt="">
+            </button>
+            <p class="screen-video__msg" hidden>Video not found — add <code>assets/current-site-mobile.mp4</code> (or .mov)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="audience" data-title="Audience" data-chapter="Research">
+    <div class="wrap">
+      <h2 class="title"><span>Audience</span></h2>
+      <div class="audience">
+        <article class="aud-card aud-card--current">
+          <h3>Current</h3>
+          <p>Everyday coffee drinkers and café visitors looking for essential details like hours, location, and menu offerings.</p>
+        </article>
+        <span class="aud-plus" aria-hidden="true">+</span>
+        <article class="aud-card aud-card--new">
+          <h3>New</h3>
+          <p>Local craftspeople, independent artisans, and pop-up market vendors seeking partnerships, event spaces, and collaboration.</p>
+        </article>
+        <article class="aud-card aud-card--together">
+          <h3>Fitting Together</h3>
+          <p>The redesigned site prioritizes everyday coffee patrons first while expanding to show makers venue imagery, spatial layouts, and how they can host events in the space.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= LIGHT BAND: Competitors + Persona ================= -->
+<div class="band band--light">
+
+  <section class="section" id="competitors" data-title="Competitors" data-chapter="Research">
+    <div class="wrap">
+      <h2 class="title title--crimson"><span>Competitors</span></h2>
+      <div class="comp-carousel reveal rise" data-carousel aria-roledescription="carousel" aria-label="Competitor websites">
+        <button class="comp-arrow comp-arrow--prev" data-prev aria-label="Previous competitor"><svg viewBox="0 0 163.804 163.804" aria-hidden="true"><use href="#arrow-icon"/></svg></button>
+        <div class="comp-stage">
+          <img class="comp-stage__ipad" src="assets/competitor-annabelle.png" alt="" loading="lazy">
+          <div class="comp-screen">
+            <div class="comp-track">
+              <div class="comp-slide screen-video" data-video aria-label="1 of 3: Annabelle House">
+                <video preload="none" muted playsinline poster="assets/competitor-annabelle-poster.jpg">
+                  <source src="assets/competitor-annabelle.mp4" type="video/mp4">
+                </video>
+                <button class="screen-video__play" aria-label="Play the Annabelle House screen recording"><img src="assets/play.svg" alt=""></button>
+                <p class="screen-video__msg" hidden>Video not found — add <code>assets/competitor-annabelle.mp4</code></p>
+              </div>
+              <div class="comp-slide screen-video" data-video aria-label="2 of 3: Mojo Coffee Gallery">
+                <video preload="none" muted playsinline poster="assets/competitor-mojo-poster.jpg">
+                  <source src="assets/competitor-mojo.mp4" type="video/mp4">
+                </video>
+                <button class="screen-video__play" aria-label="Play the Mojo Coffee Gallery screen recording"><img src="assets/play.svg" alt=""></button>
+                <p class="screen-video__msg" hidden>Video not found — add <code>assets/competitor-mojo.mp4</code></p>
+              </div>
+              <div class="comp-slide screen-video" data-video aria-label="3 of 3: Dogwood Coffee Co">
+                <video preload="none" muted playsinline poster="assets/competitor-dogwood-poster.jpg">
+                  <source src="assets/competitor-dogwood.mp4" type="video/mp4">
+                </video>
+                <button class="screen-video__play" aria-label="Play the Dogwood Coffee Co screen recording"><img src="assets/play.svg" alt=""></button>
+                <p class="screen-video__msg" hidden>Video not found — add <code>assets/competitor-dogwood.mp4</code></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="comp-arrow comp-arrow--next" data-next aria-label="Next competitor"><svg viewBox="0 0 163.804 163.804" aria-hidden="true"><use href="#arrow-icon"/></svg></button>
+        <div class="comp-dots" role="tablist" aria-label="Choose a competitor">
+          <button role="tab" aria-label="Annabelle House" aria-selected="true"></button>
+          <button role="tab" aria-label="Mojo Coffee Gallery"></button>
+          <button role="tab" aria-label="Dogwood Coffee Co"></button>
+        </div>
+        <div class="comp-caption" aria-live="polite">
+          <div class="comp-caption__item is-active"><h3>Annabelle House</h3><p>Local coffee house in Osseo, MN.</p></div>
+          <div class="comp-caption__item"><h3>Mojo Coffee Gallery</h3><p>Artistic coffee gallery in Minneapolis, MN.</p></div>
+          <div class="comp-caption__item"><h3>Dogwood Coffee Co</h3><p>Coffee Roasters and Cafe in Minneapolis, MN.</p></div>
+        </div>
+      </div>
+      <div class="insights">
+        <button class="insight reveal is-active" style="--i:0" data-goto="0"><h3>Annabelle House</h3><p>Copy Heavy &amp; Coffee Focused</p></button>
+        <button class="insight reveal" style="--i:1" data-goto="1"><h3>Mojo Coffee Co</h3><p>Artistic Gallery</p></button>
+        <button class="insight reveal" style="--i:2" data-goto="2"><h3>Dogwood Coffee Co</h3><p>Branded Roastery</p></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="persona" data-title="Persona" data-chapter="Research">
+    <div class="wrap">
+      <h2 class="title title--crimson"><span>Persona</span></h2>
+      <div class="persona">
+        <div class="persona__left">
+          <p class="persona__headline" data-scrub-words>Designed for a guest who craves mindfulness, warmth, caffeine and micro-batch craft.</p>
+          <div class="persona__cards">
+            <article class="need reveal" style="--i:0"><h3>Pain Point</h3><p>“Finding affordable pop-up space is frustrating—most café websites have zero info.”</p></article>
+            <article class="need reveal" style="--i:1"><h3>Goal</h3><p>“I want to showcase my handmade goods in an inspiring local space that brings in a supportive community.”</p></article>
+            <article class="need reveal" style="--i:2"><h3>Need</h3><p>Clear venue specs and a simple application flow to book pop-ups or workshops without email back-and-forth.</p></article>
+          </div>
+        </div>
+        <figure class="persona__card reveal rise" data-tilt>
+          <img src="assets/persona.png" alt="Illustration of Haley Winters holding a camera" loading="lazy">
+          <figcaption><strong>Haley Winters, 34</strong><span>Videographer</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CRIMSON BAND: Branding ================= -->
+<div class="band band--crimson">
+
+  <section class="section" id="moodboard" data-title="Moodboard" data-chapter="Branding">
+    <div class="wrap">
+      <h2 class="title"><span>Moodboard</span></h2>
+      <div class="mood">
+        <button class="mood__tile m1 reveal pop" style="--i:0"><img src="assets/mood-palette-1.png" alt="Coffee color palette: cream, latte, caramel, espresso, mocha, roast" loading="lazy"></button>
+        <button class="mood__tile m2 reveal pop" style="--i:1"><img src="assets/mood-palette-2.png" alt="Café counter photo with a muted palette" loading="lazy"></button>
+        <button class="mood__tile m3 reveal pop" style="--i:2"><img src="assets/mood-palette-3.png" alt="Cafés, coffee brands, patisserie palette" loading="lazy"></button>
+        <button class="mood__tile m4 reveal pop" style="--i:3"><img src="assets/mood-type-1.png" alt="Red script 'Coffee' lettering" loading="lazy"></button>
+        <button class="mood__tile m5 reveal pop" style="--i:4"><img src="assets/mood-type-2.png" alt="Ornamental 'Come After Coffee' type" loading="lazy"></button>
+        <button class="mood__tile m6 reveal pop" style="--i:5"><img src="assets/mood-image-1.png" alt="Editorial coffee website reference" loading="lazy"></button>
+        <button class="mood__tile m7 reveal pop" style="--i:6"><img src="assets/mood-image-2.png" alt="Playful coffee website on a laptop" loading="lazy"></button>
+        <button class="mood__tile m8 reveal pop" style="--i:7"><img src="assets/mood-image-3.png" alt="Coffee equipment illustration set" loading="lazy"></button>
+      </div>
+      <p class="hint">Click any tile to enlarge</p>
+    </div>
+  </section>
+
+  <section class="section" id="typography" data-title="Typography" data-chapter="Branding">
+    <div class="wrap">
+      <h2 class="title"><span>Typography</span></h2>
+      <div class="type-cards">
+        <article class="type-card reveal" style="--i:0" data-family="sans">
+          <p class="type-card__role">Primary</p>
+          <p class="type-card__name">Freight Sans</p>
+          <div class="type-card__weights" role="group" aria-label="Freight Sans weights">
+            <button data-w="300">Light</button><button data-w="400" class="on">Book</button><button data-w="500">Medium</button><button data-w="700">Bold</button>
+          </div>
+          <p class="type-card__aa">Aa</p>
+        </article>
+        <article class="type-card reveal" style="--i:1" data-family="neo">
+          <p class="type-card__role">Secondary</p>
+          <p class="type-card__name">Freight Neo</p>
+          <div class="type-card__weights" role="group" aria-label="Freight Neo weights">
+            <button data-w="300">Light</button><button data-w="400">Book</button><button data-w="500" class="on">Medium</button><button data-w="700">Bold</button>
+          </div>
+          <p class="type-card__aa">Aa</p>
+        </article>
+        <article class="type-card reveal" style="--i:2" data-family="script">
+          <p class="type-card__role">Accent</p>
+          <p class="type-card__name">Ooh Baby</p>
+          <div class="type-card__weights"><button class="on" data-w="400">Regular</button></div>
+          <p class="type-card__aa">Aa</p>
+        </article>
+      </div>
+
+      <div class="type-use">
+        <div class="type-use__intro">
+          <h3 class="subtitle">Type in use</h3>
+          <p>Desktop &amp; Mobile Styles In Use</p>
+          <label class="type-try">
+            <span>Try a word</span>
+            <input type="text" value="Coffee" maxlength="18" aria-label="Preview text for type scale">
+          </label>
+        </div>
+        <ul class="scale">
+          <li class="reveal" style="--i:0"><span class="s s-h1">Coffee</span><b>Freight Neo</b><span>H1</span><b>Bold</b><span>50PX</span></li>
+          <li class="reveal" style="--i:1"><span class="s s-h2">Coffee</span><b>Freight Neo</b><span>H2</span><b>Semi Bold</b><span>38PX</span></li>
+          <li class="reveal" style="--i:2"><span class="s s-h3">Coffee</span><b>Freight Neo</b><span>H3</span><span class="m">Medium</span><span>33PX</span></li>
+          <li class="reveal" style="--i:3"><span class="s s-h4">Coffee</span><b>Freight Neo</b><span>H4</span><span class="m">Medium</span><span>20PX</span></li>
+          <li class="reveal" style="--i:4"><span class="s s-body">Coffee</span><b class="sans">Freight Sans</b><span>Body</span><span>Book</span><span>16PX</span></li>
+          <li class="reveal" style="--i:5"><span class="s s-cap">Coffee</span><b class="sans">Freight Sans</b><span>Caption</span><span>Book</span><span>12PX</span></li>
+          <li class="reveal" style="--i:6"><span class="s s-acc">Coffee</span><span class="script">Ooh Baby</span><span>Accent</span><span class="m">Regular</span><span>Vary PX</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="color" data-title="Color" data-chapter="Branding">
+    <div class="wrap">
+      <h2 class="title"><span>Color</span></h2>
+      <div class="swatches">
+        <button class="swatch reveal rise" style="--i:0;--c:#28190E;--t:#F3EEE8" data-hex="#28190E"><span>Black<br>Espresso</span><code>#28190E</code></button>
+        <button class="swatch reveal rise" style="--i:1;--c:#4E453E;--t:#F3EEE8" data-hex="#4E453E"><span>Espresso<br>Charcoal</span><code>#4E453E</code></button>
+        <button class="swatch swatch--ring reveal rise" style="--i:2;--c:#822935;--t:#F3EEE8" data-hex="#822935"><span>Deep<br>Crimson</span><code>#822935</code></button>
+        <button class="swatch reveal rise" style="--i:3;--c:#8C5F3C;--t:#F3EEE8" data-hex="#8C5F3C"><span>Roasted<br>Amber</span><code>#8C5F3C</code></button>
+        <button class="swatch reveal rise" style="--i:4;--c:#DCC8B2;--t:#28190E" data-hex="#DCC8B2"><span>Warm<br>Oat</span><code>#DCC8B2</code></button>
+        <button class="swatch reveal rise" style="--i:5;--c:#F3EEE8;--t:#28190E" data-hex="#F3EEE8"><span>Whiteish</span><code>#F3EEE8</code></button>
+      </div>
+      <p class="hint">Click a swatch to copy its hex</p>
+    </div>
+  </section>
+
+  <section class="section" id="grids" data-title="Grids" data-chapter="Design">
+    <div class="wrap">
+      <h2 class="title"><span>Grids</span></h2>
+      <div class="grids">
+        <figure class="grids__item reveal-clip">
+          <img src="assets/grid-desktop.svg" alt="12-column desktop grid" loading="lazy">
+        </figure>
+        <figure class="grids__item grids__item--mobile reveal-clip" style="--i:2">
+          <img src="assets/grid-mobile.svg" alt="Mobile grid" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="components" data-title="Components" data-chapter="Design">
+    <div class="wrap">
+      <h2 class="title"><span>Components</span></h2>
+      <div class="components">
+        <img class="c-buttons reveal rise" src="assets/comp-buttons.png" alt="Navigation buttons, bean nav and carousel arrows" loading="lazy">
+        <img class="c-carousels reveal rise" style="--i:1" src="assets/comp-carousels.png" alt="Image carousel and beans carousel components" loading="lazy">
+        <img class="c-hotspot reveal rise" style="--i:2" src="assets/comp-hotspot.png" alt="Hot spot slider drinks card" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sitemap" data-title="Site Map" data-chapter="Design">
+    <div class="wrap">
+      <h2 class="title"><span>Site Map</span></h2>
+      <div class="sitemap" data-sitemap>
+        <svg class="sitemap__lines" aria-hidden="true"></svg>
+        <div class="node node--home" data-node="home" style="--d:0">
+          <h4>Home</h4>
+          <ul><li>Cafe Info</li><li>Featured Drinks</li><li>About Info</li><li>Artist Spotlight</li><li>Insta</li></ul>
+        </div>
+        <div class="sitemap__row">
+          <div class="node" data-node="nav" style="--d:1"><h4>Menu Nav</h4><ul><li>Beans</li><li>Events</li><li>Our Story</li><li>Contact</li></ul></div>
+          <div class="node" data-node="makers" style="--d:1.15"><h4>Makers</h4><ul><li>Seller Info</li><li>Pop-Up Info</li><li>Applications</li><li>FAQ</li></ul></div>
+          <div class="node" data-node="cafe" style="--d:1.3"><h4>Cafe Menu</h4><ul><li>Menu</li><li>Coffee, Matcha,<br>Tea, Baked Goods</li></ul></div>
+        </div>
+        <div class="sitemap__subs">
+          <div class="node node--wide" data-node="beans" style="--d:2"><h4>Beans</h4><ul><li>Blend Info</li><li>Origins</li><li>Purchase</li><li>Types</li></ul></div>
+          <div class="node node--wide" data-node="events" style="--d:2.15"><h4>Events</h4><ul><li>Event Calendar</li><li>Individual Events</li></ul></div>
+          <div class="node node--wide" data-node="story" style="--d:2.3"><h4>Our Story</h4><ul><li>Cafe Story</li><li>CTAs</li><li>Abt Carousel</li></ul></div>
+          <div class="node node--wide" data-node="contact" style="--d:2.45"><h4>Contact</h4><ul><li>Email Form</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="wireframe" data-title="Wireframe" data-chapter="Design">
+    <div class="wrap">
+      <h2 class="title"><span>Wireframe</span></h2>
+    </div>
+    <div class="scrub" data-scrub>
+      <div class="scrub__sticky">
+        <div class="wrap scrub__inner">
+          <div class="scrub__copy">
+            <h3 class="subtitle">Split Audience Design</h3>
+            <p>The low-fidelity desktop wireframe set the Swiss grid and the order of content before any color or photography was added.</p>
+            <p class="scrub__cue">Keep scrolling — both pages scroll together →</p>
+          </div>
+          <div class="scrub__frames">
+            <figure class="browser browser--wire">
+              <div class="browser__bar"><i></i><i></i><i></i><span>Wireframe</span></div>
+              <div class="browser__view"><img data-scrub-img src="assets/wireframe.png" alt="Desktop wireframe of the Metta Coffee homepage" loading="lazy"></div>
+            </figure>
+            <span class="scrub__arrow" aria-hidden="true">→</span>
+            <figure class="browser">
+              <div class="browser__bar"><i></i><i></i><i></i><span>Final</span></div>
+              <div class="browser__view"><img data-scrub-img src="assets/final-desktop.png" alt="Final Metta Coffee homepage design" loading="lazy"></div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--flush" id="final" data-title="Final Solution" data-chapter="Result">
+    <div class="wrap">
+      <h2 class="title"><span>Final Solution</span></h2>
+    </div>
+    <div class="final-hero">
+      <img data-parallax src="assets/final-hero.jpg" alt="The final Metta Coffee website on a laptop and phone" loading="lazy">
+    </div>
+  </section>
+</div>
+
+<!-- ================= AMBER BAND: Final screens ================= -->
+<div class="band band--amber">
+  <section class="section" id="screens" data-title="Home Page" data-chapter="Result">
+    <div class="wrap">
+      <div class="live-row">
+        <p class="url">www.MettaCoffee.com</p>
+        <a class="btn" href="https://tkapustka.github.io/metta-coffee-mcad/index.html" target="_blank" rel="noopener" aria-label="Live site (opens in a new tab)">Live Site</a>
+      </div>
+    </div>
+    <div class="scrub scrub--tall" data-scrub>
+      <div class="scrub__sticky">
+        <div class="wrap screens">
+          <figure class="browser browser--big">
+            <div class="browser__bar"><i></i><i></i><i></i><span>mettacoffee.com — Desktop</span></div>
+            <div class="browser__view"><img data-scrub-img src="assets/final-desktop.png" alt="Full desktop homepage design" loading="lazy"></div>
+          </figure>
+          <figure class="phone">
+            <div class="phone__view"><img data-scrub-img src="assets/final-mobile.png" alt="Full mobile homepage design" loading="lazy"></div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cross" data-title="Across Screens" data-chapter="Result">
+    <div class="wrap">
+      <img class="cross reveal rise" src="assets/cross-screens.png" alt="Our Story on tablet, Cafe Menu on desktop and Beans on mobile" loading="lazy">
+      <h3 class="subtitle subtitle--light">Pages Created</h3>
+      <ul class="pages">
+        <li class="reveal pop" style="--i:0">Home</li>
+        <li class="reveal pop" style="--i:1">Beans</li>
+        <li class="reveal pop" style="--i:2">Menu</li>
+        <li class="reveal pop" style="--i:3">Events</li>
+        <li class="reveal pop" style="--i:4">Makers</li>
+        <li class="reveal pop" style="--i:5">Contact</li>
+        <li class="reveal pop" style="--i:6">About</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ESPRESSO BAND: Conclusion ================= -->
+<div class="band band--espresso">
+  <section class="section" id="conclusion" data-title="Conclusion" data-chapter="Wrap-up">
+    <div class="wrap">
+      <h2 class="title"><span>Conclusion</span></h2>
+      <div class="concl">
+        <article class="concl__card reveal rise" style="--i:0"><h3>Insight</h3><p>What’s Necessary</p></article>
+        <article class="concl__card reveal rise" style="--i:1"><h3>Challenge</h3><p>Splitting Audiences</p></article>
+        <article class="concl__card reveal rise" style="--i:2"><h3>More Time</h3><p>Illustrations/Iconography<br>Events Back End</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section thanks" id="thanks" data-title="Thank You" data-chapter="Wrap-up">
+    <div class="wrap thanks__inner">
+      <h2 class="thanks__word">Thank You</h2>
+      <div class="thanks__cup">
+        <div class="steam" aria-hidden="true"><i></i><i></i><i></i></div>
+        <img src="assets/thank-you-cup.svg" alt="Top-down illustration of a cup of coffee">
+      </div>
+    </div>
+    <p class="thanks__foot"><a href="https://tkapustka.github.io/metta-coffee-mcad/" target="_blank" rel="noopener">View the live Metta Coffee site ↗</a></p>
+  </section>
+</div>
+
+</main>
+
+<!-- Lightbox -->
+<dialog class="lightbox" aria-label="Enlarged image">
+  <button class="lightbox__close" aria-label="Close">×</button>
+  <img alt="">
+</dialog>
+
+<div class="keys" aria-hidden="true"><kbd>←</kbd><kbd>→</kbd> sections</div>
+
+<script src="main.js?v=5"></script>
+</body>
+</html>
